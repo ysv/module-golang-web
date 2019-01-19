@@ -17,6 +17,7 @@ func (m anything) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("we are in serveHTTP")
 	fmt.Println(req)
 	tpl.ExecuteTemplate(w, "index.gohtml", req.PostForm)
+	//tpl.ExecuteTemplate(w, "index.gohtml", req.Form)
 }
 
 var tpl *template.Template
